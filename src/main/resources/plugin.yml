@@ -1,0 +1,11 @@
+name: FoxyEconomy
+version: '${project.version}'
+main: me.drigster.foxyeconomy.FoxyEconomy
+api-version: 1.18
+commands:
+  getcoins:
+    description: get coins
+  convert:
+    description: converts conis
+  spawnBanker:
+    description: spawns banker
