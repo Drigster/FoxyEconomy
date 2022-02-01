@@ -20,7 +20,7 @@ public class Localization {
     }
 
     public static void setup(){
-        file = new File(Bukkit.getServer().getPluginManager().getPlugin("FoxyEconomy").getDataFolder(), "localization.yml");
+        file = new File(Bukkit.getServer().getPluginManager().getPlugin("FoxyEconomy").getDataFolder(), "Localization.yml");
 
         if(!file.exists()){
             try {
