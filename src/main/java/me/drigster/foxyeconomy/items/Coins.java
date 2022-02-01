@@ -43,7 +43,7 @@ public class Coins {
                     if(addExact(inventory, goldCoin)){
                         ironCoin.setAmount(64);
                         inventory.removeItem(ironCoin);
-                        MessageManager.sendMessage(p, "messages.convert.iron-to-gold");
+                        MessageManager.sendMessageWithPlaceholder(p, "messages.convert.iron-to-gold", "%ironRatio%", plugin.getConfig().getString("convertRatio.ironToGold"));
                     }
                     else{
                         MessageManager.sendMessage(p, "errors.not-enough-space");
@@ -60,7 +60,7 @@ public class Coins {
                     if(addExact(inventory, diamondCoin)){
                         goldCoin.setAmount(64);
                         inventory.removeItem(goldCoin);
-                        MessageManager.sendMessage(p, "messages.convert.gold-to-diamond");
+                        MessageManager.sendMessageWithPlaceholder(p, "messages.convert.gold-to-diamond", "%goldRatio%", plugin.getConfig().getString("convertRatio.goldToDiamond"));
                     }
                     else{
                         MessageManager.sendMessage(p, "errors.not-enough-space");
@@ -77,7 +77,7 @@ public class Coins {
                     if(addExact(inventory, ironCoin)){
                         goldCoin.setAmount(1);
                         inventory.removeItem(goldCoin);
-                        MessageManager.sendMessage(p, "messages.convert.gold-to-iron");
+                        MessageManager.sendMessageWithPlaceholder(p, "messages.convert.gold-to-iron", "%ironRatio%", plugin.getConfig().getString("convertRatio.ironToGold"));
                     }
                     else{
                         MessageManager.sendMessage(p, "errors.not-enough-space");
@@ -94,7 +94,7 @@ public class Coins {
                     if(addExact(inventory, goldCoin)){
                         diamondCoin.setAmount(1);
                         inventory.removeItem(diamondCoin);
-                        MessageManager.sendMessage(p, "messages.convert.diamond-to-gold");
+                        MessageManager.sendMessageWithPlaceholder(p, "messages.convert.diamond-to-gold", "%goldRatio%", plugin.getConfig().getString("convertRatio.goldToDiamond"));
                     }
                     else{
                         MessageManager.sendMessage(p, "errors.not-enough-space");
