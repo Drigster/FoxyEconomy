@@ -1,5 +1,6 @@
 package me.drigster.foxyeconomy;
 
+import me.drigster.foxycore.FoxyCore;
 import me.drigster.foxyeconomy.commands.ConvertCoinsCommand;
 import me.drigster.foxyeconomy.commands.GetCoinsCommand;
 import me.drigster.foxyeconomy.commands.SpawnBankerCommand;
@@ -27,6 +28,10 @@ public final class FoxyEconomy extends JavaPlugin {
         Data.init();
         Localization.init();
 
+        FoxyCore.setPlugin(this);
+        System.out.println("economy " + Localization.get());
+        FoxyCore.setLocalization(Localization.get());
+
         ItemManager.init();
 
         pm.registerEvents(new Banker(), this);
@@ -36,7 +41,6 @@ public final class FoxyEconomy extends JavaPlugin {
         getCommand("spawnBanker").setExecutor(new SpawnBankerCommand());
         getCommand("getcoins").setExecutor(new GetCoinsCommand());
         getCommand("convert").setExecutor(new ConvertCoinsCommand());
-
     }
 
     @Override

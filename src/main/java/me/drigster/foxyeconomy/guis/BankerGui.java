@@ -1,7 +1,7 @@
 package me.drigster.foxyeconomy.guis;
 
+import me.drigster.foxycore.items.GuiElements;
 import me.drigster.foxyeconomy.items.Coins;
-import me.drigster.foxyeconomy.items.GuiElements;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;

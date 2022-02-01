@@ -1,10 +1,9 @@
 package me.drigster.foxyeconomy.guis;
 
+import me.drigster.foxycore.items.GuiElements;
+import me.drigster.foxycore.managers.MessageManager;
 import me.drigster.foxyeconomy.items.Coins;
-import me.drigster.foxyeconomy.items.GuiElements;
-import me.drigster.foxyeconomy.managers.MessageManager;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -63,7 +62,7 @@ public class ConvertGui implements Listener {
 
     public static void generateGui(){
 
-        gui = Bukkit.createInventory(null, 18, MessageManager.getLocalizedString("words.converter"));
+        gui = Bukkit.createInventory(null, 18, MessageManager.createLocalizedString("words.converter"));
 
         ItemStack blank = GuiElements.blank;
         ItemStack back = GuiElements.back;

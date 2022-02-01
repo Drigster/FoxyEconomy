@@ -1,9 +1,8 @@
 package me.drigster.foxyeconomy.items;
 
+import me.drigster.foxycore.managers.MessageManager;
 import me.drigster.foxyeconomy.FoxyEconomy;
 import me.drigster.foxyeconomy.files.Data;
-import me.drigster.foxyeconomy.managers.MessageManager;
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.Statistic;
@@ -145,10 +144,10 @@ public class Coins {
             p.getInventory().addItem(coins);
             Data.get().set("players." + p.getUniqueId() + ".timeSpend", Integer.parseInt(timeSpend) + coins.getAmount() * plugin.getConfig().getInt("hours"));
             Data.save();
-            p.sendMessage(MessageManager.getLocalizedStringWithPlaceholder("messages.got-coins", "%coinsReceived%", String.valueOf(coins.getAmount())));
+            p.sendMessage(MessageManager.createLocalizedStringWithPlaceholder("messages.got-coins", "%coinsReceived%", String.valueOf(coins.getAmount())));
         }
         else {
-            p.sendMessage(MessageManager.getLocalizedStringWithPlaceholder("errors.need-to-wait", "%minutes%", String.valueOf(60 - (minutes - hours * 60))));
+            p.sendMessage(MessageManager.createLocalizedStringWithPlaceholder("errors.need-to-wait", "%minutes%", String.valueOf(60 - (minutes - hours * 60))));
         }
     }
 
