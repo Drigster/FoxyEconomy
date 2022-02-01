@@ -71,13 +71,13 @@ public class ConvertGui implements Listener {
 
         ItemStack diamondCoin = GuiElements.diamondCoin;
         ItemStack goldCoin = GuiElements.goldCoin;
-        ItemStack ironCoin = GuiElements.ironCoin;
-        ironCoin.setAmount(64);
+        ItemStack goldCoin64 = GuiElements.goldCoin.clone();
+        goldCoin64.setAmount(64);
+        ItemStack ironCoin64 = GuiElements.ironCoin;
+        ironCoin64.setAmount(64);
 
-        ItemStack goldCoin64 = GuiElements.goldCoin64;
-
-        ItemStack[] menuItems = {blank, ironCoin, arrowRightIcon, goldCoin, blank, goldCoin64, arrowRightIcon, diamondCoin, blank,
-                                blank, ironCoin, arrowLeftIcon, goldCoin, blank, goldCoin64, arrowLeftIcon, diamondCoin, back};
+        ItemStack[] menuItems = {blank, ironCoin64, arrowRightIcon, goldCoin, blank, goldCoin64, arrowRightIcon, diamondCoin, blank,
+                                blank, ironCoin64, arrowLeftIcon, goldCoin, blank, goldCoin64, arrowLeftIcon, diamondCoin, back};
         gui.setContents(menuItems);
 
     }
