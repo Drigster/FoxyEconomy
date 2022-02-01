@@ -135,8 +135,6 @@ public class Coins {
         }
 
         int hoursLeft = hours - Integer.parseInt(timeSpend);
-        System.out.println(hours);
-        System.out.println(hoursLeft);
 
         if(hoursLeft > plugin.getConfig().getInt("hours")){
             ItemStack coins = Coins.goldCoin;

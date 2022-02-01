@@ -29,7 +29,6 @@ public final class FoxyEconomy extends JavaPlugin {
         Localization.init();
 
         FoxyCore.setPlugin(this);
-        System.out.println("economy " + Localization.get());
         FoxyCore.setLocalization(Localization.get());
 
         ItemManager.init();
@@ -41,10 +40,5 @@ public final class FoxyEconomy extends JavaPlugin {
         getCommand("spawnBanker").setExecutor(new SpawnBankerCommand());
         getCommand("getcoins").setExecutor(new GetCoinsCommand());
         getCommand("convert").setExecutor(new ConvertCoinsCommand());
-    }
-
-    @Override
-    public void onDisable() {
-        // Plugin shutdown logic
     }
 }
